@@ -48,7 +48,7 @@ namespace task5
 
         public BankAccount(decimal balance, AccountType type)
         {
-            AccountNumber = GenerateAccountNumber(); 
+            AccountNumber = GenerateAccountNumber();
             Balance = balance;
             Type = type;
         }
@@ -56,7 +56,7 @@ namespace task5
         public BankAccount(decimal balance)
         {
             AccountNumber = GenerateAccountNumber();
-            Balance = balance;            
+            Balance = balance;
         }
 
         public BankAccount(AccountType type)
@@ -68,7 +68,7 @@ namespace task5
 
         public void GetMoney(decimal amount)
         {
-            if(this.Balance >= amount)
+            if (this.Balance >= amount)
             {
                 this.Balance -= amount;
             }
@@ -81,6 +81,28 @@ namespace task5
         public void IncreaseBalance(decimal amount)
         {
             this.Balance += amount;
+        }
+        public static bool operator ==(BankAccount b1, BankAccount b2)
+        {
+            if (b1.Type == b2.Type && b1.Balance == b2.Balance)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator !=(BankAccount b1, BankAccount b2)
+        {
+            if (b1.Type == b2.Type && b1.Balance == b2.Balance)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
