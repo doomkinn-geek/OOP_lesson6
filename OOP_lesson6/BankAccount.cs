@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace task5
+namespace OOP_lesson6
 {
-    enum AccountType
+    public enum AccountType
     {
         Current, //текущий
         Checking, //расчетный
@@ -12,7 +12,7 @@ namespace task5
         Deposit, //депозитный
         Social //социальный
     }
-    class BankAccount
+    public class BankAccount
     {
         public long AccountNumber
         {
@@ -82,6 +82,24 @@ namespace task5
         {
             this.Balance += amount;
         }
+
+        public override bool Equals(object obj)
+        {
+            if ((BankAccount)obj == this)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public static bool operator ==(BankAccount b1, BankAccount b2)
         {
             if (b1.Type == b2.Type && b1.Balance == b2.Balance)
