@@ -12,12 +12,12 @@ namespace PRGGame
         public int RewardExperience { get; set; }
         public int RewardGold { get; set; }
         public List<LootItem> LootTable { get; set; }
-        public Monster(int id, string name, int maximumDamage, int rewardExperiencePoints, int rewardGold, uint maximumHealth) : base(maximumHealth)
+        public Monster(int id, string name, int maximumDamage, int rewardExperience, int rewardGold, uint maximumHealth) : base(maximumHealth)
         {
             ID = id;
             Name = name;
             MaximumDamage = maximumDamage;
-            RewardExperience = rewardExperiencePoints;
+            RewardExperience = rewardExperience;
             RewardGold = rewardGold;
             LootTable = new List<LootItem>();
         }

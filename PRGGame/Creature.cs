@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PRGGame
 {
-    public class Creature
+    public abstract class Creature
     {
         public uint Health { get; set; }
         public uint MaximumHealth { get; set; }
