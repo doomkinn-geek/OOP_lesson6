@@ -18,7 +18,7 @@ namespace PRGGame.Actions
 
         protected void ReportResults(string result)
         {
-            OnActionPerformed?.Invoke(this, result);
+            Console.WriteLine(result);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace PRGGame.Actions
         public AttackWithWeapon(Item itemInUse, int minDamage, int maxDamage)
             : base(itemInUse)
         {
+            _minDamage = minDamage;
+            _maxDamage = maxDamage;
         }
         public void Execute(Creature actor, Creature target)
         {

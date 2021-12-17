@@ -5,10 +5,10 @@ using System.Text;
 namespace PRGGame.Models
 {
     public class Mage : PlayerClass
-    {
+    {        
         public Mage() : base(BaseCharacteristic.Intelligence, 1000)
         {
-
+            
         }
     }
 }

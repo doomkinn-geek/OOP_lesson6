@@ -14,10 +14,12 @@ namespace PRGGame.Models
     public abstract class PlayerClass : Creature
     {
         private BaseCharacteristic _mainCharacteristic;
+        public List<Spell> SpellsAvailable { get; }
         public BaseCharacteristic MainCharacteristic { get => _mainCharacteristic; }
-        public PlayerClass(BaseCharacteristic _characteristic, uint _health) : base(_health)
+        protected PlayerClass(BaseCharacteristic _characteristic, uint _health) : base("", _health)
         {
             _mainCharacteristic = _characteristic;
+            SpellsAvailable = new List<Spell>();
         }
     }
 }
