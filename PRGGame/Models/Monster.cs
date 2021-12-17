@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame
+namespace PRGGame.Models
 {
     public class Monster : Creature
     {
