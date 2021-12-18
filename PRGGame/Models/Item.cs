@@ -9,22 +9,20 @@ namespace PRGGame.Models
     {
         Weapon,
         Spell,
-        Consumable
+        Consumable,
+        Loot
     }
     public class Item
-    {
-        public uint ID { get; set; }
+    {        
         public string Name { get; set; }
         public ItemType Type { get; }
         public IAction Action { get; set; }
         public uint Price { get; }
-        public Item(uint id, 
-            string name, 
+        public Item(string name, 
             ItemType type,
             uint price,
             IAction action = null)
-        {
-            ID = id;
+        {            
             Name = name;
             Type = type;
             Action = action;

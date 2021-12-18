@@ -8,14 +8,10 @@ namespace PRGGame.Actions
     public abstract class BaseAction
     {
         protected readonly Item _itemInUse;
-
-        public event EventHandler<string> OnActionPerformed;
-
         protected BaseAction(Item itemInUse)
         {
             _itemInUse = itemInUse;
         }
-
         protected void ReportResults(string result)
         {
             Console.WriteLine(result);

@@ -9,7 +9,7 @@ namespace PRGGame.Models
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }
 
-        public Weapon(uint id, string name, int minimumDamage, int maximumDamage) : base(id, name)
+        public Weapon(string name, int minimumDamage, int maximumDamage, uint price) : base(name, ItemType.Weapon, price)
         {
             MinimumDamage = minimumDamage;
             MaximumDamage = maximumDamage;

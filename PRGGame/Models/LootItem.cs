@@ -19,7 +19,7 @@ namespace PRGGame.Models
         private LootQuality _quality;
         public float DropPercentage { get => _dropPercentage; }
         public LootQuality Quality { get => _quality; }
-        public LootItem(uint id, string name, LootQuality quality) : base(id, name)
+        public LootItem(string name, LootQuality quality, uint price) : base(name, ItemType.Loot, price)
         {
             _quality = quality;
             Random rnd = new Random();
