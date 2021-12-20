@@ -8,7 +8,7 @@ namespace PRGGame.Models
     public enum ItemType
     {
         Weapon,
-        Spell,
+        Ability,
         Consumable,
         Loot
     }
