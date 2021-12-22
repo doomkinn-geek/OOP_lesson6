@@ -1,9 +1,9 @@
-﻿using PRGGame.Models;
+﻿using RPGGame.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame.Actions
+namespace RPGGame.Actions
 {
     public abstract class BaseAction
     {

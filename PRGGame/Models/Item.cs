@@ -1,9 +1,9 @@
-﻿using PRGGame.Actions;
+﻿using RPGGame.Actions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame.Models
+namespace RPGGame.Models
 {
     public enum ItemType
     {

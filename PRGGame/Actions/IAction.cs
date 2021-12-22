@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PRGGame.Models;
+using RPGGame.Models;
 
-namespace PRGGame.Actions
+namespace RPGGame.Actions
 {
     public interface IAction
     {        

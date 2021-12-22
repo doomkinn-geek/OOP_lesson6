@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task1", "OOP_lesson6\task1.csproj", "{0E47B5FB-8E68-4C80-9CAB-8FDAFDCF1447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRGGame", "PRGGame\PRGGame.csproj", "{F5D3B745-10D0-4868-BA5F-2BD2B106EE24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGGame", "PRGGame\RPGGame.csproj", "{F5D3B745-10D0-4868-BA5F-2BD2B106EE24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

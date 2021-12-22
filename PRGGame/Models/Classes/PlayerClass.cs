@@ -1,8 +1,9 @@
-﻿using System;
+﻿using RPGGame.Models.Spells;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame.Models.Classes
+namespace RPGGame.Models.Classes
 {
     public enum BaseCharacteristic
     {

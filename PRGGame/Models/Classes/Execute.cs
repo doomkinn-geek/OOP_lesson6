@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame.Models.Classes
+namespace RPGGame.Models.Classes
 {
     class IceBolt : Ability
     {

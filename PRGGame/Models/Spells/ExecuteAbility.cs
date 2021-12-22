@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PRGGame.Models.Spells
+namespace RPGGame.Models.Spells
 {
     public class ExecuteAbility : Ability
     {
