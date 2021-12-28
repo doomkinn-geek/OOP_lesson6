@@ -7,19 +7,37 @@ namespace RPGGame.Actions
 {    
     public class AttackWtihSpell : BaseAction, IAction
     {
-        private readonly int _damage;
-        private readonly int _mana;
+        private readonly uint _minDamage;
+        private readonly uint _maxDamage;        
+        private readonly uint _mana;
 
-        public AttackWtihSpell(Item spellInUse, int magicDamage, int manaCost) :
+        public AttackWtihSpell(Spell spellInUse) :
             base(spellInUse)
         {
-            _damage = magicDamage;
-            _mana = manaCost;
+            _minDamage = spellInUse.MinimumDamage;
+            _maxDamage = spellInUse.MaximumDamage;
+            _mana = spellInUse.ManaCost;
         }
 
-        public void Execute(Creature actor, Creature victim)
+        public void Execute(Creature actor, Creature target)
         {
-            int damage = _damage;            
+            uint damage = RandomNumberGenerator.NumberBetween(_minDamage, _maxDamage);            
+            if (actor.Mana < _mana)
+            {
+                ReportResults("Недостаточно маны");
+                return;
+            }
+
+            if (damage > 0)
+            {
+                ReportResults($"{actor.Name} поразил {target.Name} {damage} очков урона.");
+                target.TakeDamage(damage);
+                actor.SpendMana(_mana);
+            }
+            else
+            {
+                ReportResults("Ты промахнулся");
+            }
         }
     }
 }

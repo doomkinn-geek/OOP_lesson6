@@ -1,24 +1,34 @@
 ﻿using RPGGame.Models;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace RPGGame.Actions
 {
     public class AttackWithWeapon : BaseAction, IAction
     {
-        private readonly int _maxDamage;
-        private readonly int _minDamage;
+        private readonly uint _maxDamage;
+        private readonly uint _minDamage;
 
-        public AttackWithWeapon(Item itemInUse, int minDamage, int maxDamage)
+        public AttackWithWeapon(Weapon itemInUse)
             : base(itemInUse)
         {
-            _minDamage = minDamage;
-            _maxDamage = maxDamage;
+            _minDamage = itemInUse.MinimumDamage;
+            _maxDamage = itemInUse.MaximumDamage;
         }
         public void Execute(Creature actor, Creature target)
         {
-            throw new NotImplementedException();
+            uint damage = RandomNumberGenerator.NumberBetween(_minDamage, _maxDamage);            
+            if (damage == 0)
+            {
+                ReportResults($"Вы атаковали, но атака на {target.Name} промахнулась.");
+            }
+            else
+            {
+                ReportResults($"{actor.Name} ударил {target.Name}, нанес {damage} очков урона.");
+                target.TakeDamage(damage);
+            }
         }
     }
 }
