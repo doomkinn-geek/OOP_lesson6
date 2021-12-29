@@ -30,7 +30,7 @@ namespace RPGGame.Actions
 
             if (damage > 0)
             {
-                ReportResults($"{actor.Name} поразил {target.Name} {damage} очков урона.");
+                ReportResults($"{actor.Name} поразил {target.Name} на {damage} очков урона.");
                 target.TakeDamage(damage);
                 actor.SpendMana(_mana);
             }
